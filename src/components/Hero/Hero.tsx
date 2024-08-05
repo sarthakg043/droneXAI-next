@@ -33,7 +33,7 @@ const Hero = () => {
                     <div className='mt-5 lg:mt-0'> Not just <br /> Products</div>
                 </h1>
             </div>
-            <p className='text-center text-xl mt-8 max-w-md mx-auto lg:mx-10 tracking-normal px-3 lg:px-0'>Our products support millions of users across hundreds of types of apps. Here's our work we're proud to share.</p>
+            <p className='text-center text-xl mt-8 max-w-md mx-auto lg:mx-10 tracking-normal px-3 lg:px-0'>Our products support millions of users across hundreds of types of apps. Here&#39;s our work we&#39;re proud to share.</p>
             <div 
                 className='flex flex-col lg:mt-52 gap-6 justify-center items-center mt-8 max-w-md mx-auto py-3 px-5'
             >
