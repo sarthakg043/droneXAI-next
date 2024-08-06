@@ -47,11 +47,11 @@ const Hero = () => {
                     alt='' 
                     width={200} 
                     height={200} 
-                    className='absolute hidden sm:inline w-[150px] md:w-[200px] top-[56px] left-[298px] md:left-[628px] lg:left-[1158px]' 
+                    className='absolute hidden sm:inline w-[150px] md:w-[200px] top-[196px] left-[298px] md:left-[628px] lg:left-[1158px]' 
                 /> 
 
             </div>
-            <p className='text-center text-xl mt-8 max-w-md mx-auto lg:mx-24 tracking-normal px-3 lg:px-0'>Our products support millions of users across hundreds of types of apps. Here&#39;s our work we&#39;re proud to share.</p>
+            <p className='text-center text-xl mt-8 lg:mt-32 max-w-md mx-auto lg:mx-24 tracking-normal px-3 lg:px-0'>Our products support millions of users across hundreds of types of apps. Here&#39;s our work we&#39;re proud to share.</p>
             <div 
                 className='flex flex-col lg:mt-32 gap-6 justify-center items-center mt-8 max-w-md mx-auto py-3 px-5'
             >
