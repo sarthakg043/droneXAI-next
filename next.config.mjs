@@ -27,6 +27,16 @@ const nextConfig = {
     
         return config
       },
+      images:{
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'framerusercontent.com',
+            port: '',
+            pathname: '/images/**',
+          },
+        ],
+      }
 };
 
 export default nextConfig;

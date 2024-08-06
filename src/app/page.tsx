@@ -6,8 +6,8 @@ import Navbar from "@/components/Navbar/Navbar";
 export default function Home() {
   return (
     <div>
-      {/* <Banner /> */}
       <Navbar />
+      <Banner />
       <Hero />
     </div>
   );

@@ -1,6 +1,7 @@
 import { Menu } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { SheetButton } from "../SheetButton"
 
 const Navbar = () => {
   return (
@@ -18,22 +19,20 @@ const Navbar = () => {
                             className="relative rounded-full"
                         />
                     </div>
-                    <div className="text-white font-bold text-lg sm:text-3xl text-opacity-85 tracking-tight">
+                    <div className="text-white font-bold text-3xl sm:text-xl lg:text-3xl text-opacity-85 tracking-tight">
                         <span className='bg-[linear-gradient(to_right,#1a2a6c,#b21f1f,#fdbb2d)] text-transparent bg-clip-text'>
                             DroneX AI
                         </span>
                     </div>
                 </div>
-                <div className="sm:hidden border border-white border-opacity-30 h-10 w-10 inline-flex justify-center items-center rounded-lg">
-                    <Menu className="text-white" />
-                </div>
-                <nav className="hidden sm:flex gap-6 items-center">
+                <SheetButton />
+                <nav className="hidden lg:flex gap-6 items-center">
                     <Link className="text-opacity-65 text-white hover:text-opacity-100 transition" href="/">Home</Link>
                     <Link className="text-opacity-65 text-white hover:text-opacity-100 transition" href="/services">Services</Link>
                     <Link className="text-opacity-65 text-white hover:text-opacity-100 transition" href="/process">Process</Link>
                     <Link className="text-opacity-65 text-white hover:text-opacity-100 transition" href="/testimonials">Testimonials</Link>
                     <Link className="text-opacity-65 text-white hover:text-opacity-100 transition" href="/contact">Contact Us</Link>
-                    <button className="text-black bg-white hover:bg-opacity-80 px-4 py-2 rounded-lg">Book Now</button>
+                    <button className="text-black bg-white/80 hover:bg-white px-4 py-2 rounded-lg transition">Book Now</button>
                 </nav>
             </div>
         </div>
