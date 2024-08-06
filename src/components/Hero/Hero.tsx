@@ -32,7 +32,7 @@ const Hero = () => {
                             <br /> 
                             <span>Experiences</span>
                         </div> 
-                        <div className='mt-5 lg:mt-0 lg:text-left'> Not <br className='hidden lg:block' /> Just <br /> Products</div>
+                        <div className='mt-5 lg:mt-0 lg:text-left'> Not Just <br /> Products</div>
                     </h1>   
                 </div>
                 <Image 
