@@ -6,7 +6,11 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
 
-const Services = () => {
+interface ServicesProps {
+  id?: string;
+}
+
+const Services: React.FC<ServicesProps> = ({id})  => {
   const [expandedCards, setExpandedCards] = useState<{ [key: number]: boolean }>({});
 
   const toggleExpand = (index: number) => {
@@ -75,7 +79,7 @@ const Services = () => {
   ]
 
   return (
-    <div className='bg-black text-white py-[72px] sm:py-24'>
+    <div id={id} className='bg-black text-white py-[72px] sm:py-24'>
       <div className="container">
         <h2 className='text-center font-bold text-5xl sm:text-6xl tracking-tighter'>Everthing you need</h2>
         <div className='max-w-2xl mx-auto'>

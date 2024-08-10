@@ -37,9 +37,13 @@ const images = [
     },
 ]
 
-const LogoTicker = () => {
+interface LogoTickerProps {
+    id?: string;
+}
+
+const LogoTicker: React.FC<LogoTickerProps> = ({id}) => {
   return (
-    <div className='bg-black text-white py-[72px] sm:py-24'>
+    <div id={id} className='bg-black text-white py-[72px] sm:py-24'>
         <div className="contaier">
             <h2 className='text-xl text-center text-white/70'>Trusted by the world&#39;s most innovative teams</h2>
             <div 

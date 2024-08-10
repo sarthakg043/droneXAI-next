@@ -6,10 +6,14 @@ import './Hero.css'
 import Image from 'next/image'
 
 
-const Hero = () => {
+interface HeroProps {
+    id?: string;
+    handleSmoothScroll: (e: React.MouseEvent<HTMLHeadingElement | HTMLButtonElement, MouseEvent>, targetId: string) => void;
+}
 
+const Hero: React.FC<HeroProps> = ({id, handleSmoothScroll}) => {
     return (
-    <div className='bg-black h-screen text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46ED8_82%)] lg:bg-[linear-gradient(to_bottom,#000,#000)] py-[72px]  relative overflow-clip'>
+    <div id={id} className='bg-black h-screen text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46ED8_82%)] lg:bg-[linear-gradient(to_bottom,#000,#000)] py-[72px]  relative overflow-clip'>
         <div className='absolute left-1/2 -translate-x-1/2 h-[375px] w-[750px] sm:w-[1536px] sm:h-[768px] lg:w-[2400px] lg:h-[1200px] rounded-[100%] border border-[#B48CDE] bg-[radial-gradient(closest-side,#000_82%,#9560EB)] top-[calc(100%-96px)] sm:top-[calc(100%-120px)]'></div> 
         <div className="hidden lg:block absolute top-0 left-0 w-full h-screen bg-black">
             <Spline scene='https://prod.spline.design/ifrM50UodKoRaIJC/scene.splinecode' />
@@ -55,7 +59,7 @@ const Hero = () => {
             <div 
                 className='flex flex-col lg:mt-32 gap-6 justify-center items-center mt-8 max-w-md mx-auto py-3 px-5'
             >
-                <button className="hidden button-85 text-xl bg-opacity-15 font-bold lg:flex items-center gap-2" role="button">Learn More <ChevronsDown className='text-inherit translate-y-[0.06rem]' /></button>
+                <button className="hidden button-85 text-xl bg-opacity-15 font-bold lg:flex items-center gap-2" role="button" onClick={(e) => {handleSmoothScroll(e, "partners")}}>Learn More <ChevronsDown className='text-inherit translate-y-[0.06rem]' /></button>
                 <button className="lg:hidden bg-white mt-0 sm:mt-3 px-5 py-3 text-lg text-black rounded-lg shadow-lg flex" role="button">Learn More <ChevronsDown className=' text-inherit' /></button>
             </div>
         </div>
