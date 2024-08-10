@@ -1,6 +1,20 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
 
 const Services = () => {
+  const [expandedCards, setExpandedCards] = useState<{ [key: number]: boolean }>({});
+
+  const toggleExpand = (index: number) => {
+    setExpandedCards((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
 
   const service_items = [
     {
@@ -69,17 +83,35 @@ const Services = () => {
         </div>
 
         <div className='mt-16 flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-4 sm:gap-4'>
-          {service_items.map(({title, description}, index) => (
-            <div key={index} className='sm:max-w-[430px] xl:max-w-[400px] 2xl:max-w-[322px] border border-white/30 px-5 py-10 text-center rounded-xl'>
-              <div className='inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg'>{"Logo"}</div>
-              <h3 className='mt-6 font-bold'>{title}</h3>
-              <p className='mt-2 text-white/70 text-justify'>{description}</p>
-            </div>
-          ))}
+          {service_items.map((service, index) => {
+            const { title, description } = service;
+            const isExpanded = expandedCards[index];
+
+            return (
+              <div key={index} className='sm:max-w-[430px] xl:max-w-[400px] 2xl:max-w-[322px] border border-white/30 px-5 py-10 text-center rounded-xl'>
+                <div className='inline-flex h-14 w-14 bg-white text-black justify-center items-center rounded-lg'>{"Logo"}</div>
+                <h3 className='mt-6 font-bold'>{title.toUpperCase()}</h3>
+                <p className='mt-2 text-white/70 text-justify sm:text-center'>
+                  {isExpanded ? description : (description.length > 240 ? description.substring(0, 240) + "..." : description)}
+                  <span className='sm:hidden underline underline-offset-4 text-white/90 hover:text-white cursor-pointer' onClick={() => toggleExpand(index)}>{" "}
+                    {description.length > 240 ? (isExpanded ? "show less" : "read more") : ""}
+                  </span>
+                  <span className='hidden sm:inline'>
+                    <HoverCard>
+                      <HoverCardTrigger className='underline underline-offset-4 text-white/90 hover:text-white cursor-pointer'>
+                        {description.length > 240 ? "read more" : ""}
+                      </HoverCardTrigger>
+                      <HoverCardContent className='w-80'>
+                        {description}
+                      </HoverCardContent>
+                    </HoverCard>
+                  </span>
+                </p>
+              </div>
+            );
+          })}
         </div>
-
       </div>
-
     </div>
   )
 }
