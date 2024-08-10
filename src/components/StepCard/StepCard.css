@@ -1,0 +1,22 @@
+.step-card::after{
+    content: var(--card-after-content);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: #f5f5f5;
+    z-index: -1;
+    border-radius: 999px;
+    z-index: 10;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.step-card{
+    max-width: 500px;
+}

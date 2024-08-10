@@ -8,6 +8,7 @@ import Processes from "@/components/Processes/Processes";
 import Services from "@/components/Services/Services";
 import { ReactLenis } from 'lenis/react';
 import Lenis from 'lenis';
+import StepCard from '@/components/StepCard/StepCard';
 
 export default function Home() {
   const lenisRef = useRef<Lenis | null>(null);
