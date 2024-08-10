@@ -24,7 +24,7 @@ interface StepCardProps {
 const StepCard: React.FC<StepCardProps> = ({num, title, description}) => {
   return (
     <div className='relative'>
-        <Card className="step-card after:tracking-tighter" style={{ '--card-after-content': `"${num}."`}}>
+        <Card className="step-card after:tracking-tighter" style={{ '--card-after-content': `"${num}."`} as React.CSSProperties}>
             <CardHeader>
                 <CardTitle className='mb-2'>Card Title</CardTitle>
                 <CardDescription>Card Description</CardDescription>
