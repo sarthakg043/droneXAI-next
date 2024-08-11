@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -11,8 +12,8 @@ import {
   } from "@/components/ui/sheet"
   import { Menu } from "lucide-react"
 
-interface NavbarProps {
-    handleSmoothScroll: (e: React.MouseEvent<HTMLHeadingElement, MouseEvent>, targetId: string) => void;
+type NavbarProps = {
+    handleSmoothScroll?: (e: React.MouseEvent<HTMLHeadingElement, MouseEvent>, targetId: string) => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({handleSmoothScroll}) => {
@@ -53,27 +54,27 @@ const Navbar: React.FC<NavbarProps> = ({handleSmoothScroll}) => {
                         <div className="grid gap-4 py-4">
                             <div className="grid items-center gap-4">
                                 <SheetClose asChild>
-                                    <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll(e, "home")}>Home</h2>
+                                    <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "home")}>Home</h2>
                                 </SheetClose>
                             </div>
                             <div className="grid items-center gap-4">
                                 <SheetClose asChild>
-                                    <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll(e, "services")}>Services</h2>
+                                    <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "services")}>Services</h2>
                                 </SheetClose>
                             </div>
                             <div className="grid items-center gap-4">
                                 <SheetClose asChild>
-                                    <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll(e, "process")}>Process</h2>
+                                    <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "process")}>Process</h2>
                                 </SheetClose>
                             </div>
                             <div className="grid items-center gap-4">
                                 <SheetClose asChild>
-                                    <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll(e, "testimonials")}>Testimonials</h2>
+                                    <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "testimonials")}>Testimonials</h2>
                                 </SheetClose>
                             </div>
                             <div className="grid items-center gap-4">
                                 <SheetClose asChild>
-                                    <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll(e, "contact")}>Contact Us</h2>
+                                    <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "contact")}>Contact Us</h2>
                                 </SheetClose>
                             </div>
                         </div>
@@ -82,11 +83,11 @@ const Navbar: React.FC<NavbarProps> = ({handleSmoothScroll}) => {
                     </SheetContent>
                 </Sheet>
                 <nav className="hidden lg:flex gap-6 items-center">
-                    <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll(e, "home")}>Home</h2>
-                    <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll(e, "services")}>Services</h2>
-                    <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll(e, "process")}>Process</h2>
-                    <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll(e, "testimonials")}>Testimonials</h2>
-                    <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll(e, "contact")}>Contact Us</h2>
+                    <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "home")}>Home</h2>
+                    <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "services")}>Services</h2>
+                    <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "process")}>Process</h2>
+                    <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "testimonials")}>Testimonials</h2>
+                    <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "contact")}>Contact Us</h2>
                     <button className="text-black bg-white/80 hover:bg-white px-4 py-2 rounded-lg transition">Book Now</button>
                 </nav>
             </div>

@@ -1,14 +1,13 @@
-
+"use client"
 import Spline from '@splinetool/react-spline/next'
-import { ChevronsDown, ChevronsRight } from 'lucide-react'
-import Link from 'next/link'
+import { ChevronsDown } from 'lucide-react'
 import './Hero.css'
 import Image from 'next/image'
 
 
-interface HeroProps {
+type HeroProps = {
     id?: string;
-    handleSmoothScroll: (e: React.MouseEvent<HTMLHeadingElement | HTMLButtonElement, MouseEvent>, targetId: string) => void;
+    handleSmoothScroll?: (e: React.MouseEvent<HTMLHeadingElement | HTMLButtonElement, MouseEvent>, targetId: string) => void;
 }
 
 const Hero: React.FC<HeroProps> = ({id, handleSmoothScroll}) => {
@@ -61,8 +60,8 @@ const Hero: React.FC<HeroProps> = ({id, handleSmoothScroll}) => {
             <div 
                 className='flex flex-col lg:mt-32 gap-6 justify-center items-center mt-8 max-w-md mx-auto py-3 px-5'
             >
-                <button className="hidden button-85 text-xl bg-opacity-15 font-bold lg:flex items-center gap-2" role="button" onClick={(e) => {handleSmoothScroll(e, "partners")}}>Learn More <ChevronsDown className='text-inherit translate-y-[0.06rem]' /></button>
-                <button className="lg:hidden bg-white mt-0 sm:mt-3 px-5 py-3 text-lg text-black rounded-lg shadow-lg flex" role="button" onClick={(e) => {handleSmoothScroll(e, "partners")}}>Learn More <ChevronsDown className=' text-inherit' /></button>
+                <button className="hidden button-85 text-xl bg-opacity-15 font-bold lg:flex items-center gap-2" role="button" onClick={(e) => {handleSmoothScroll?.(e, "partners")}}>Learn More <ChevronsDown className='text-inherit translate-y-[0.06rem]' /></button>
+                <button className="lg:hidden bg-white mt-0 sm:mt-3 px-5 py-3 text-lg text-black rounded-lg shadow-lg flex" role="button" onClick={(e) => {handleSmoothScroll?.(e, "partners")}}>Learn More <ChevronsDown className=' text-inherit' /></button>
             </div>
         </div>
     </div>
