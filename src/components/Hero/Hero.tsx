@@ -43,14 +43,16 @@ const Hero: React.FC<HeroProps> = ({id, handleSmoothScroll}) => {
                     src={"https://framerusercontent.com/images/UaehuySGbAQUD7LaqLmpmo71Y4.png?scale-down-to=512"} 
                     alt='' 
                     width={200} 
-                    height={200} 
+                    height={200}
+                    draggable="true" 
                     className='absolute hidden sm:inline w-[150px] md:w-[200px] right-[276px] top-[168px] md:right-[616px] lg:right-[1016px]' 
                 /> 
                 <Image 
                     src={"https://framerusercontent.com/images/SqHU6Ili7ACWk8dhvEPmdfXEPDA.png?scale-down-to=512"} 
                     alt='' 
                     width={200} 
-                    height={200} 
+                    height={200}
+                    draggable="true" 
                     className='absolute hidden sm:inline w-[150px] md:w-[200px] top-[196px] left-[298px] md:left-[628px] lg:left-[1158px]' 
                 /> 
 
@@ -60,7 +62,7 @@ const Hero: React.FC<HeroProps> = ({id, handleSmoothScroll}) => {
                 className='flex flex-col lg:mt-32 gap-6 justify-center items-center mt-8 max-w-md mx-auto py-3 px-5'
             >
                 <button className="hidden button-85 text-xl bg-opacity-15 font-bold lg:flex items-center gap-2" role="button" onClick={(e) => {handleSmoothScroll(e, "partners")}}>Learn More <ChevronsDown className='text-inherit translate-y-[0.06rem]' /></button>
-                <button className="lg:hidden bg-white mt-0 sm:mt-3 px-5 py-3 text-lg text-black rounded-lg shadow-lg flex" role="button">Learn More <ChevronsDown className=' text-inherit' /></button>
+                <button className="lg:hidden bg-white mt-0 sm:mt-3 px-5 py-3 text-lg text-black rounded-lg shadow-lg flex" role="button" onClick={(e) => {handleSmoothScroll(e, "partners")}}>Learn More <ChevronsDown className=' text-inherit' /></button>
             </div>
         </div>
     </div>
