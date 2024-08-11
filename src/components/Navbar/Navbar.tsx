@@ -77,6 +77,11 @@ const Navbar: React.FC<NavbarProps> = ({handleSmoothScroll}) => {
                                     <h2 className="cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "contact")}>Contact Us</h2>
                                 </SheetClose>
                             </div>
+                            <div className="grid items-center gap-4">
+                                <SheetClose asChild>
+                                    <button className="text-black bg-white/80 hover:bg-white px-4 py-2 rounded-lg transition">Book Now</button>
+                                </SheetClose>
+                            </div>
                         </div>
                         <SheetFooter>
                         </SheetFooter>
