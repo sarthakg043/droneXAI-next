@@ -52,7 +52,7 @@ const Hero: React.FC<HeroProps> = ({id, handleSmoothScroll}) => {
                     width={200} 
                     height={200}
                     draggable="true" 
-                    className='absolute hidden sm:inline w-[150px] md:w-[200px] top-[196px] left-[298px] md:left-[628px] lg:left-[1158px]' 
+                    className='absolute hidden sm:inline w-[150px] md:w-[200px] top-[196px] left-[298px] md:left-[628px] lg:left-[1120px]' 
                 /> 
 
             </div>
