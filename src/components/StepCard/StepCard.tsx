@@ -19,15 +19,17 @@ interface StepCardProps {
     num: string;
     title: string;
     description: string;
+    className?: string;
+    cardClass?: string;
 }
 
-const StepCard: React.FC<StepCardProps> = ({num, title, description}) => {
+const StepCard: React.FC<StepCardProps> = ({num, title, description, className, cardClass}) => {
   return (
-    <div className='relative'>
-        <Card className="step-card after:tracking-tighter" style={{ '--card-after-content': `"${num}."`} as React.CSSProperties}>
+    <div className={`relative m-5 ${className}`}>
+        <Card className={`step-card max-w-[500px] after:tracking-tighter ${cardClass} `} style={{ '--card-after-content': `"${num}."`} as React.CSSProperties}>
             <CardHeader>
-                <CardTitle className='mb-2'>Card Title</CardTitle>
-                <CardDescription>Card Description</CardDescription>
+                <CardTitle className='mb-2'>{title}</CardTitle>
+                <CardDescription>{description}</CardDescription>
             </CardHeader>
             {/* <CardContent>
                 <p>Card Content</p>
