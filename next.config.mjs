@@ -35,6 +35,12 @@ const nextConfig = {
             port: '',
             pathname: '/images/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'img.freepik.com',
+            port: '',
+            pathname: '/**', // This allows all paths under the hostname
+          },
         ],
       }
 };

@@ -91,7 +91,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({id}) => {
                                     <div className="p-1">
                                         <Card className='bg-transparent border-none'>
                                             <CardContent className="flex aspect-square items-center justify-center bg-inherit">
-                                                <TestimonialCard name={testimonial.name} company={testimonial.company} position={testimonial.position} message={testimonial.message} />
+                                                <TestimonialCard name={testimonial.name} company={testimonial.company} position={testimonial.position} message={testimonial.message} img={testimonial.img ?? undefined} />
                                             </CardContent>
                                         </Card>
                                     </div>
