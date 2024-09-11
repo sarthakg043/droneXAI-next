@@ -40,7 +40,7 @@ const stepCardItems = [
 
 const Processes: React.FC<ProcessProps> = ({id}) => {
   return (
-    <div id={id} className='bg-black text-white bg-gradient-to-b from-black to-[#5D2CA8] py-[72px] lg:px-24'>
+    <div id={id} className='bg-black text-white bg-gradient-to-b from-black to-[#5D2CA8] py-[72px] lg:px-24 pt-24'>
       <div className='container mx-auto'>
         <h2 className='text-center text-5xl sm:text-6xl font-bold tracking-tighter'>AI development simplified</h2>
         <div className='sm:max-w-5xl mx-auto'>

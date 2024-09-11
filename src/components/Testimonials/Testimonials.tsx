@@ -48,7 +48,7 @@ const testimonials = [
         name: 'Paul',
         position: 'CEO',
         company: 'Apple',
-        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+        message: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
         url: '',
     },
     {
@@ -77,7 +77,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({id}) => {
     return (
         <div id={id} className='bg-black text-white bg-gradient-to-b from-[#5D2CA8] to-black'>
             <div className='container'>
-                <h2>Testimonials</h2>
+                <h2 className='text-center text-5xl font-bold tracking-tighter mb-7'>Testimonials</h2>
                 <div>
                     <Carousel
                         plugins={[plugin.current]}
