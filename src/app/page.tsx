@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import Processes from "@/components/Processes/Processes";
 import Services from "@/components/Services/Services";
 import SmoothScrollWrapper from '@/components/SmoothScrollWrapper';
+import Testimonials from "@/components/Testimonials/Testimonials";
 
 export default function Home() {
 
@@ -17,6 +18,7 @@ export default function Home() {
           <LogoTicker id='partners' />
           <Services id='services' />
           <Processes id='process' />
+          <Testimonials id='testimonials' />
       </SmoothScrollWrapper>
     </div>
   );

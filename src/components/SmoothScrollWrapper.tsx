@@ -46,7 +46,7 @@ const SmoothScrollWrapper: React.FC<SmoothScrollWrapperProps> = ({ children }) =
     const lenis = new Lenis({
       duration: 1.3,
       // easing: (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2, // easeInOutCubic
-      easing: (t) => solveCubicBezier(t, .42,.2,.35,1), // custom easeInOutCubic
+      easing: (t) => solveCubicBezier(t, 0.16, 1, 0.3, 1), // easeOutExpo
       touchMultiplier: 2,
     });
 
