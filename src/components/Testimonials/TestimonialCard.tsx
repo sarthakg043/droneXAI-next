@@ -9,9 +9,12 @@ interface TestimonialCardProps {
 }
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({name="Alex George", position="CEO", company="Microsoft", message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.", url="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=1800&t=st=1726044612~exp=1726045212~hmac=348e4d978e5f5a3c759377ddbe5d38401c2b661c648fc522642f5b95a91cc69a"}) => {
-  // Message should not exceed 100 characters including spaces
-  if (message.length > 100) {
-    message = message.slice(0, 100) + '...'
+  // Message should not exceed 82 characters including spaces
+  if (message.length > 82) {
+    // find index of space from last
+    let index = message.slice(0, 82).lastIndexOf(' ')
+    // slice the message till the last space
+    message = message.slice(0, index) + '...'
   }
   return (
     <div className='h-full w-full mt-10'>
