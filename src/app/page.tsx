@@ -1,5 +1,6 @@
 import { Banner } from "@/components/Banner/Banner";
 import ContactUs from "@/components/ContactUs/ContactUs";
+import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 import LogoTicker from "@/components/LogoTicker";
 import Navbar from "@/components/Navbar/Navbar";
@@ -21,6 +22,7 @@ export default function Home() {
           <Processes id='process' />
           <Testimonials id='testimonials' />
           <ContactUs id='contact' />
+          <Footer />
       </SmoothScrollWrapper>
     </div>
   );
