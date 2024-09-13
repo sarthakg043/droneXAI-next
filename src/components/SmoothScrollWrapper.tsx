@@ -1,6 +1,6 @@
 "use client"
 // components/SmoothScrollWrapper.tsx
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, isValidElement, cloneElement } from 'react';
 import Lenis from 'lenis';
 
 interface SmoothScrollWrapperProps {
@@ -74,13 +74,11 @@ const SmoothScrollWrapper: React.FC<SmoothScrollWrapperProps> = ({ children }) =
 
   return (
     <div>
-      {React.Children.map(children, (child) => {
-        // Ensure the child is a React element
-        if (React.isValidElement<SmoothScrollWrapperChildProps>(child)) {
-          return React.cloneElement<SmoothScrollWrapperChildProps>(child, { handleSmoothScroll });
-        }
-        return child;
-      })}
+      {React.Children.map(children, child => 
+        isValidElement(child) && typeof child.type === 'function' 
+          ? cloneElement(child as React.ReactElement<SmoothScrollWrapperChildProps>, { handleSmoothScroll })
+          : child
+      )}
     </div>
   );
 };

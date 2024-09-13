@@ -37,6 +37,7 @@ export const Feature: React.FC<FeatureProps> = ({ title, description, img, isExp
                 style={{
                     WebkitMaskImage: maskImage,
                     maskImage,
+                    pointerEvents: 'none' // Make the border not block mouse events
                 }}
                 ref={borderRef}
             >
