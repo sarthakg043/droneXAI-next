@@ -3,7 +3,7 @@ import Spline from '@splinetool/react-spline/next'
 import { ChevronsDown } from 'lucide-react'
 import './Hero.css'
 import Image from 'next/image'
-
+import {motion} from 'framer-motion'
 
 type HeroProps = {
     id?: string;
@@ -38,22 +38,36 @@ const Hero: React.FC<HeroProps> = ({id, handleSmoothScroll}) => {
                         <div className='mt-5 lg:mt-0 lg:text-left'> Not Just <br /> Products</div>
                     </h1>   
                 </div>
-                <Image 
-                    src={"https://framerusercontent.com/images/UaehuySGbAQUD7LaqLmpmo71Y4.png?scale-down-to=512"} 
-                    alt='' 
-                    width={200} 
-                    height={200}
-                    draggable="true" 
-                    className='absolute hidden sm:inline w-[150px] md:w-[200px] right-[276px] top-[168px] md:right-[616px] lg:right-[1016px]' 
-                /> 
-                <Image 
-                    src={"https://framerusercontent.com/images/SqHU6Ili7ACWk8dhvEPmdfXEPDA.png?scale-down-to=512"} 
-                    alt='' 
-                    width={200} 
-                    height={200}
-                    draggable="true" 
-                    className='absolute hidden sm:inline w-[150px] md:w-[200px] top-[196px] left-[298px] md:left-[628px] lg:left-[1120px]' 
-                /> 
+                <motion.div 
+                    className='absolute hidden sm:inline w-[150px] md:w-[200px] right-[276px] top-[168px] md:right-[616px] lg:right-[1016px]'
+                    drag
+                    dragSnapToOrigin
+                >
+
+                    <Image 
+                        src={"https://framerusercontent.com/images/UaehuySGbAQUD7LaqLmpmo71Y4.png?scale-down-to=512"} 
+                        alt='' 
+                        width={200} 
+                        height={200}
+                        draggable="false" 
+                        className='max-w-none' 
+                    /> 
+                </motion.div>
+                <motion.div
+                    className='absolute hidden sm:inline w-[150px] md:w-[200px] top-[196px] left-[298px] md:left-[628px] lg:left-[1120px]'
+                    drag
+                    dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+                    // dragSnapToOrigin
+                >
+                    <Image 
+                        src={"https://framerusercontent.com/images/SqHU6Ili7ACWk8dhvEPmdfXEPDA.png?scale-down-to=512"} 
+                        alt='' 
+                        width={200} 
+                        height={200}
+                        draggable="false" 
+                        className='max-w-none' 
+                    /> 
+                </motion.div>
 
             </div>
             <p className='text-center text-xl mt-8 lg:mt-32 max-w-md mx-auto lg:mx-24 tracking-normal px-3 lg:px-0'>Our products support millions of users across hundreds of types of apps. Here&#39;s our work we&#39;re proud to share.</p>
