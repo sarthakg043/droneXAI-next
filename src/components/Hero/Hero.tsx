@@ -3,7 +3,8 @@ import Spline from '@splinetool/react-spline/next'
 import { ChevronsDown } from 'lucide-react'
 import './Hero.css'
 import Image from 'next/image'
-import {motion} from 'framer-motion'
+import {useScroll, useTransform, motion} from 'framer-motion'
+import { useRef } from 'react'
 
 type HeroProps = {
     id?: string;
@@ -11,6 +12,15 @@ type HeroProps = {
 }
 
 const Hero: React.FC<HeroProps> = ({id, handleSmoothScroll}) => {
+    const containerRef = useRef<HTMLDivElement>(null);
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ['start start', 'end start'],
+    });
+
+    const translateY = useTransform(scrollYProgress, [0, 1], [0, -1000]);
+
     return (
     <div id={id} className='bg-black h-screen text-white bg-[linear-gradient(to_bottom,#000,#200D42_34%,#4F21A1_65%,#A46ED8_82%)] lg:bg-[linear-gradient(to_bottom,#000,#000)] py-[72px]  relative overflow-clip'>
         <div className='absolute left-1/2 -translate-x-1/2 h-[375px] w-[750px] sm:w-[1536px] sm:h-[768px] lg:w-[2400px] lg:h-[1200px] rounded-[100%] border border-[#B48CDE] bg-[radial-gradient(closest-side,#000_82%,#9560EB)] top-[calc(100%-96px)] sm:top-[calc(100%-120px)]'></div> 
@@ -42,6 +52,14 @@ const Hero: React.FC<HeroProps> = ({id, handleSmoothScroll}) => {
                     className='absolute hidden sm:inline w-[150px] md:w-[200px] right-[276px] top-[168px] md:right-[616px] lg:right-[1016px]'
                     drag
                     dragSnapToOrigin
+                    dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
+                    style={{
+                        translateY
+                    }}
+                    transition={{
+                        ease: 'easeInOut',
+                    }}
+
                 >
 
                     <Image 
@@ -56,7 +74,13 @@ const Hero: React.FC<HeroProps> = ({id, handleSmoothScroll}) => {
                 <motion.div
                     className='absolute hidden sm:inline w-[150px] md:w-[200px] top-[196px] left-[298px] md:left-[628px] lg:left-[1120px]'
                     drag
-                    dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+                    dragTransition={{ bounceStiffness: 200, bounceDamping: 10 }}
+                    style={{
+                        translateY
+                    }}
+                    transition={{
+                        ease: 'easeInOut',
+                    }}
                     // dragSnapToOrigin
                 >
                     <Image 
