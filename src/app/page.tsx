@@ -1,4 +1,5 @@
 import { Banner } from "@/components/Banner/Banner";
+import ContactUs from "@/components/ContactUs/ContactUs";
 import Hero from "@/components/Hero/Hero";
 import LogoTicker from "@/components/LogoTicker";
 import Navbar from "@/components/Navbar/Navbar";
@@ -10,7 +11,7 @@ import Testimonials from "@/components/Testimonials/Testimonials";
 export default function Home() {
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <SmoothScrollWrapper>
           <Navbar />
           <Banner />
@@ -19,6 +20,7 @@ export default function Home() {
           <Services id='services' />
           <Processes id='process' />
           <Testimonials id='testimonials' />
+          <ContactUs id='contact' />
       </SmoothScrollWrapper>
     </div>
   );
