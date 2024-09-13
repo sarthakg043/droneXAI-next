@@ -28,10 +28,10 @@ const ContactUs: React.FC<ContactProps> = ({id}) =>{
                 className='absolute w-[150px] top[220px] mt-20 left-[calc(70%+24px)] sm:w-[200px] sm:left-[calc(80%+24px)] lg:w-[300px] lg:mt-14 lg:left-[calc(90%+48px)]' 
             /> 
             <h2 className='font-bold text-5xl tracking-tighter sm:text-6xl'>
-                Let's Create your next Big Idea Together
+                Let&apos;s Create your next Big Idea Together
             </h2>
             <p className='text-xl text-white/70 mt-5'>
-                We are here to help you with your next project. Let's talk about your idea and make it a reality.
+                We are here to help you with your next project. Let&apos;s talk about your idea and make it a reality.
             </p>
             <form action="" className='mt-10 flex flex-col gap-2.5 max-w-sm mx-auto sm:flex-row '>
                 <Input type='email' placeholder='your@email.com' className='h-12 bg-white/20 rounded-lg px-5 font-medium placeholder:text-[#9CA3AF] flex-1' />
