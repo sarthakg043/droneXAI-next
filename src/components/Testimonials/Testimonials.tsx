@@ -12,6 +12,7 @@ import {
 import { TestimonialCard } from './TestimonialCard'
 import BillImg from '@/assets/images/people/bill.jpg'
 import AlexImg from '@/assets/images/people/alex.jpg'
+import { poiretOne } from '@/fonts'
 
 
 interface TestimonialsProps {
@@ -77,7 +78,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({id}) => {
     return (
         <div id={id} className='bg-black text-white bg-gradient-to-b from-[#5D2CA8] to-black'>
             <div className='container'>
-                <h2 className='text-center text-5xl font-bold tracking-tighter mb-7'>Testimonials</h2>
+                <h2 className='text-center text-5xl font-bold mb-7' style={{fontFamily: poiretOne.style.fontFamily}}>Testimonials</h2>
                 <div>
                     <Carousel
                         plugins={[plugin.current]}

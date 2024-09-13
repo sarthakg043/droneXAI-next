@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { BadgeDollarSignIcon, LeafIcon } from 'lucide-react';
 import { Feature } from '../Feature';
+import { poiretOne } from '@/fonts'
 
 interface ServicesProps {
   id?: string;
@@ -78,7 +79,7 @@ const Services: React.FC<ServicesProps> = ({id})  => {
   return (
     <div id={id} className='bg-black text-white py-[72px] sm:py-24'>
       <div className="container">
-        <h2 className='text-center font-bold text-5xl sm:text-6xl tracking-tighter'>Everthing you need</h2>
+        <h2 className='text-center font-bold text-5xl sm:text-6xl' style={{fontFamily: poiretOne.style.fontFamily}}>Everthing you need</h2>
         <div className='max-w-2xl mx-auto'>
           <p className='text-justify sm:text-center  mt-5 text-xl text-white/70'>As a one-stop shop, we eliminate the need to work with multiple studios or agencies. We combine design and development to deliver seamless, cost-effective AI solutions, crafting bespoke, multi-modal experiences that bring your vision to life.</p>
         </div>

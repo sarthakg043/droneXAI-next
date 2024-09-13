@@ -2,6 +2,7 @@ import React from 'react'
 import { Input } from '../ui/input';
 import { Button } from '../ui/button';
 import Image from 'next/image';
+import { poiretOne } from '@/fonts';
 
 interface ContactProps {
     id?: string;
@@ -27,7 +28,7 @@ const ContactUs: React.FC<ContactProps> = ({id}) =>{
                 draggable="true" 
                 className='absolute w-[150px] top[220px] mt-20 left-[calc(70%+24px)] sm:w-[200px] sm:left-[calc(80%+24px)] lg:w-[300px] lg:mt-14 lg:left-[calc(90%+48px)]' 
             /> 
-            <h2 className='font-bold text-5xl tracking-tighter sm:text-6xl'>
+            <h2 className='font-bold text-5xl sm:text-6xl' style={{fontFamily: poiretOne.style.fontFamily}}>
                 Let&apos;s Create your next Big Idea Together
             </h2>
             <p className='text-xl text-white/70 mt-5'>
