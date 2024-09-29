@@ -13,7 +13,7 @@ interface TestimonialCardProps {
 }
 
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({name="Alex George", position="CEO", company="Microsoft", message="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.", img="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=1800&t=st=1726044612~exp=1726045212~hmac=348e4d978e5f5a3c759377ddbe5d38401c2b661c648fc522642f5b95a91cc69a", url="https://www.google.com"}) => {
-  const limit = 261;
+  const limit = 200;
   // Message should not exceed 82 characters including spaces
   if (message.length > limit) {
     // find index of space from last

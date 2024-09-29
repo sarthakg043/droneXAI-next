@@ -8,6 +8,8 @@ import ChasterITSolImg from '@/assets/images/chaster_it_solutions.png'
 import VectroScalar from '@/assets/images/VectroScalar.jpg'
 import OptiValueTek from '@/assets/images/OptiValueTek_Logo.webp'
 import DixitGT from '@/assets/images/dixit_global_tech.png'
+import ZendeskLogo from '@/assets/images/Zendesk_logo.png';
+import Kadambri from '@/assets/images/kadambri.png'
 
 const DynamicImage = dynamic(() => import('next/image'), { ssr: false });
 
@@ -25,9 +27,17 @@ const images = [
         alt: 'OptiValueTek'
     },
     {
+        src: ZendeskLogo,
+        alt: 'Zendesk'
+    },
+    {
+        src: Kadambri,
+        alt: 'Kadambri Teas'
+    },
+    {
         src: DixitGT,
         alt: 'Dixit Global Tech'
-    }
+    },
 
 ]
 
@@ -54,10 +64,10 @@ const LogoTicker: React.FC<LogoTickerProps> = ({id}) => {
                     animate={{ translateX: '-50%' }}
                 >
                     {images.map(({src, alt}, index) => (
-                        <DynamicImage key={index} src={src} alt={alt} className={`w-auto h-20 flex-none filter grayscale hover:grayscale-0 hover:brightness-100 transition ${(alt === "Amazon")? 'brightmess-150' : 'brightness-50'}`} />
+                        <DynamicImage priority key={index} src={src} alt={alt} className={`w-auto h-20 flex-none filter grayscale hover:grayscale-0 hover:brightness-100 transition ${(alt === "Zendesk")? 'brightmess-150' : 'brightness-50'}`} />
                     ))}
                     {images.map(({src, alt}, index) => (
-                        <DynamicImage key={index} src={src} alt={alt} className={`w-auto h-20 flex-none filter grayscale hover:grayscale-0 hover:brightness-100 transition ${(alt === "Amazon")? 'brightmess-150' : 'brightness-50'}`} />
+                        <DynamicImage priority key={index} src={src} alt={alt} className={`w-auto h-20 flex-none filter grayscale hover:grayscale-0 hover:brightness-100 transition ${(alt === "Zendesk")? 'brightmess-150' : 'brightness-50'}`} />
                     ))}
                 </motion.div>
             </div>

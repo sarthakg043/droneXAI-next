@@ -77,10 +77,18 @@ const ContactUs: React.FC<ContactProps> = ({id}) =>{
                 <p className='text-xl text-white/70 mt-5'>
                     We are here to help you with your next project. Let&apos;s talk about your idea and make it a reality.
                 </p>
-                <form action="" className='mt-10 flex flex-col gap-2.5 max-w-sm mx-auto sm:flex-row '>
+                <div className='mx-auto mt-10'>
+                    <button
+                        className="text-black bg-white/80 hover:bg-white px-8 py-4 rounded-xl transition text-2xl"
+                        onClick={() => window.open("https://calendly.com/dronex-ai/dronex-ai-discovery-call", "_blank")}
+                    >
+                        Book Now
+                    </button>
+                </div>
+                {/* <form action="" className='mt-10 flex flex-col gap-2.5 max-w-sm mx-auto sm:flex-row '>
                     <Input type='email' placeholder='your@email.com' className='h-12 bg-white/20 rounded-lg px-5 font-medium placeholder:text-[#9CA3AF] flex-1' />
                     <Button type='submit' className='h-12 bg-primary text-black font-bold rounded-lg px-5'>Get in Touch</Button>
-                </form>
+                </form> */}
             </div>
         </div>
     )

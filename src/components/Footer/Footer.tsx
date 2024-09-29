@@ -8,21 +8,21 @@ const Footer = () => {
         <div className="container">
             <div className='flex flex-col gap-4 sm:flex-row sm:justify-between'>
                 <div className='text-center'>
-                    &copy; DroneX AI 2021, Inc. All rights reserved.
+                    &copy; DroneX AI 2024, Inc. All rights reserved.
                 </div>
                 <ul className='flex justify-center gap-2.5'>
                     <li>
-                        <Link href='https://x.com'>
+                        <Link href='https://x.com/karndumcat'>
                             <TwitterIcon size={24} />
                         </Link>
                     </li>
                     <li>
-                        <Link href='https://instagram.com'>
+                        <Link href='https://www.instagram.com/dronex_ai/'>
                             <InstagramIcon size={24} />
                         </Link>
                     </li>
                     <li>
-                        <Link href='https://linkedin.com'>
+                        <Link href='https://www.linkedin.com/company/dronex-ai/'>
                             <LucideLinkedin size={24} />
                         </Link>
                     </li>

@@ -60,7 +60,7 @@ const Services: React.FC<ServicesProps> = ({id})  => {
       img: null,
     },
     {
-      title: 'AI-backed Design &amp; Development',
+      title: 'AI-backed Design & Development',
       description: 'AI-backed software development to manage the entire lifecycle from designing, developing, deploying &amp; maintaining customer software. Integrate AI into the software development lifecycle to ensure faster time-to-market, better scale, quality and efficiency.',
       img: null,
     },

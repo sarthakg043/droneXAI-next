@@ -79,7 +79,12 @@ const Navbar: React.FC<NavbarProps> = ({handleSmoothScroll}) => {
                             </div>
                             <div className="grid items-center gap-4">
                                 <SheetClose asChild>
-                                    <button className="text-black bg-white/80 hover:bg-white px-4 py-2 rounded-lg transition">Book Now</button>
+                                    <button
+                                        className="text-black bg-white/80 hover:bg-white px-4 py-2 rounded-lg transition"
+                                        onClick={() => window.open("https://calendly.com/dronex-ai/dronex-ai-discovery-call", "_blank")}
+                                    >
+                                        Book Now
+                                    </button>
                                 </SheetClose>
                             </div>
                         </div>
@@ -93,7 +98,12 @@ const Navbar: React.FC<NavbarProps> = ({handleSmoothScroll}) => {
                     <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "process")}>Process</h2>
                     <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "testimonials")}>Testimonials</h2>
                     <h2 className="text-opacity-65 text-white hover:text-opacity-100 transition cursor-pointer" onClick={(e) => handleSmoothScroll?.(e, "contact")}>Contact Us</h2>
-                    <button className="text-black bg-white/80 hover:bg-white px-4 py-2 rounded-lg transition">Book Now</button>
+                    <button
+                        className="text-black bg-white/80 hover:bg-white px-4 py-2 rounded-lg transition"
+                        onClick={() => window.open("https://calendly.com/dronex-ai/dronex-ai-discovery-call", "_blank")}
+                    >
+                        Book Now
+                    </button>
                 </nav>
             </div>
         </div>
