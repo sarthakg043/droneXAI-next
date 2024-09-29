@@ -1,42 +1,34 @@
 "use client"
 import React from 'react'
-import AmazonLogo from "@/assets/images/Amazon-Logo.png"
-import GoogleLogo from '@/assets/images/Google-logo.png'
-import MicrosoftLogo from '@/assets/images/Microsoft-Logo.png'
-import SalesforceLogo from '@/assets/images/Salesforce-Logo.png'
-import SamsungLogo from '@/assets/images/Samsung-Logo-2-500x281.png'
-import AppleLogo from '@/assets/images/Apple-Logo.png'
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { poiretOne } from '@/fonts'
+
+import ChasterITSolImg from '@/assets/images/chaster_it_solutions.png'
+import VectroScalar from '@/assets/images/VectroScalar.jpg'
+import OptiValueTek from '@/assets/images/OptiValueTek_Logo.webp'
+import DixitGT from '@/assets/images/dixit_global_tech.png'
 
 const DynamicImage = dynamic(() => import('next/image'), { ssr: false });
 
 const images = [
     { 
-        src: AmazonLogo,
-        alt: 'Amazon'
+        src: ChasterITSolImg,
+        alt: 'Chaster IT Solutions'
     },
     { 
-        src: GoogleLogo,
-        alt: 'Google'
+        src: VectroScalar,
+        alt: 'VectroScalar'
     },
-    { 
-        src: MicrosoftLogo,
-        alt: 'Microsoft'
+    {
+        src: OptiValueTek,
+        alt: 'OptiValueTek'
     },
-    { 
-        src: SalesforceLogo,
-        alt: 'Salesforce'
-    },
-    { 
-        src: SamsungLogo,
-        alt: 'Samsung'
-    },
-    { 
-        src: AppleLogo,
-        alt: 'Apple'
-    },
+    {
+        src: DixitGT,
+        alt: 'Dixit Global Tech'
+    }
+
 ]
 
 interface LogoTickerProps {
